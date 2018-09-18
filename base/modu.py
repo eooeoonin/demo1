@@ -43,6 +43,6 @@ for i in l:
     then=int(d["st_mtime"])
     if((now-then)>3600):
         os.system("tar -cvf i;mv i.tag.gz /backup")
-        1
+        12
 '''
 subprocess.call("dir")
