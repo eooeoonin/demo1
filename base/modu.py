@@ -5,7 +5,7 @@ import datetime
 import subprocess
 
 class File:
-    f=open("C:\\Users\\zhangwei5\\Desktop\\测试信息.txt","r+")
+    f=open("test.txt","r+")
     def pf(self):
         l = File.f.readlines()
         for i in l:
@@ -24,10 +24,10 @@ a.wf()
 
 print(os.listdir("E:\\迅雷下载\\小甲鱼零基础入门Python（87集全）"))
 print(os.getcwd())
-print(os.stat("C:\\Users\\zhangwei5\\Desktop\\测试信息.txt"))
+print(os.stat("test.txt"))
 print(os.path.join("C:\\Users\\zhangwei5\\Desktop","aaa.txt"))
 #os.mkdir("C:\\Users\\zhangwei5\\Desktop\\new")
-print(os.path.basename("C:\\Users\\zhangwei5\\Desktop\\测试信息.txt"))
+print(os.path.basename("test.txt"))
 
 print(time.time())
 print(time.localtime())
