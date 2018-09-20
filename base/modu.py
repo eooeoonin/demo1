@@ -3,9 +3,9 @@ import time
 import sys
 import datetime
 import subprocess
-
+'''
 class File:
-    f=open("test.txt","r+")
+    f=open("C:\\Users\\zhangwei5\\Desktop\\测试信息.txt","r+")
     def pf(self):
         l = File.f.readlines()
         for i in l:
@@ -24,10 +24,10 @@ a.wf()
 
 print(os.listdir("E:\\迅雷下载\\小甲鱼零基础入门Python（87集全）"))
 print(os.getcwd())
-print(os.stat("test.txt"))
+print(os.stat("C:\\Users\\zhangwei5\\Desktop\\测试信息.txt"))
 print(os.path.join("C:\\Users\\zhangwei5\\Desktop","aaa.txt"))
 #os.mkdir("C:\\Users\\zhangwei5\\Desktop\\new")
-print(os.path.basename("test.txt"))
+print(os.path.basename("C:\\Users\\zhangwei5\\Desktop\\测试信息.txt"))
 
 print(time.time())
 print(time.localtime())
@@ -35,7 +35,7 @@ print(time.gmtime())
 print(time.strftime("%Y-%m-%d %H:%M:%S"))
 print(time.strptime("30 Nov 00", "%d %b %y"))
 #print(datetime.timederta("days",1))
-'''
+
 l=os.listdir("/tomcat/log/")
 now=int(time.time())
 for i in l:
@@ -43,6 +43,22 @@ for i in l:
     then=int(d["st_mtime"])
     if((now-then)>3600):
         os.system("tar -cvf i;mv i.tag.gz /backup")
-        12
 '''
-subprocess.call("dir")
+
+def w1(func):
+    def inner():
+        print('...验证权限...')
+        func()
+    return inner
+
+@w1
+def f1():
+    print('f1 called')
+
+@w1
+def f2():
+    print('f2 called')
+
+f1()
+f2()
+

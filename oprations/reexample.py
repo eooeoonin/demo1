@@ -4,7 +4,7 @@ import re
 pattern = re.compile(u'你好')
 
 # 使用Pattern匹配文本，获得匹配结果，无法匹配时将返回None
-match = pattern.match(u'，世界!')
+match = pattern.match(u'你好世界!')
 
 if match:
     # 使用Match获得分组信息
@@ -17,7 +17,7 @@ print("*"*100)
 
 p = re.compile(r'\d+')
 print(p.split('one1two2three3four4'))
-print("*"*100)
+print(type(p),"*"*100)
 
 # 将正则表达式编译成Pattern对象
 pattern = re.compile(r'world')
@@ -33,8 +33,8 @@ print("*"*100)
 
 text = "Example 3: There is 1 date 10/25/95 in here!"
 m = re.search("(\d{1,2})/(\d{1,2})/(\d{2,4})", text)
-print(m.group())
+print("group:",m.group())
 
-print(m.group(1), m.group(2), m.group(3))
+print(m.group(1), m.group(2), m.group(3))  #按照()分组
 month, day, year = m.group(1, 2, 3)
 print(month, day, year)

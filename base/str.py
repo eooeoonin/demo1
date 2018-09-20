@@ -17,10 +17,11 @@ s4="abcDEF"
 print(s4.lower())
 print(s4.capitalize())
 
-s5="ca"
+s3="abcabcabcabcabcabcabcabcabcab"
+s5="ab"
 print(s3.startswith(s5,2,7))
-print(s3.endswith(s5,2,4))   #???
-
+print(s3.endswith(s5,1,2))   #???
+'''
 print(s5.__len__())
 
 s6="123a"
@@ -33,3 +34,8 @@ print(s7.strip("abc"))  #移除头尾字符
 
 print(s7.index("1234"))
 print(s7.index("abc",5))
+'''
+
+s1 = "ABC+-DEF"
+s2 = s1[3:5]
+print (s2)
