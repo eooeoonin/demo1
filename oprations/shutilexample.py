@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 #coding=utf-8
-
-from shutil import make_archive
-import os
+import shutil
 
 def targz_dir():
-    archive_name = "myimage"
-    root_dir = "../image"
-    make_archive(archive_name, 'gztar', root_dir)
+    archive_name = "basebak"
+    root_dir = "../base"
+    shutil.make_archive(archive_name, 'gztar', root_dir)
+
+def copy():
+    shutil.copy("config.ini","1.txt")
+    shutil.copytree("../base","basebak")
+
+def rm():
+    shutil.move("1.txt","basebak/")
+    shutil.rmtree("basebak")
 
 if __name__=="__main__":
+    copy()
+    rm()
     targz_dir()
