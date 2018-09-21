@@ -39,3 +39,20 @@ print(s7.index("abc",5))
 s1 = "ABC+-DEF"
 s2 = s1[3:5]
 print (s2)
+
+str='hello,world!'
+str1="llo"
+print("find:",str.find(str1))
+print("index",str.index(str1))
+
+ls1=[4,3,2,1,5,8,"11","22","aa","bb"]
+ls2=["hello",[1,3],["hello"],3.14,"哈哈哈",2.5,3,3.14,2.5,3]
+ls1.reverse()
+print(ls1)
+#print(ls1[::-1])
+#print(ls1)
+print(ls2[::-1])
+
+str="abcde"
+print(str[::-1])
+print(str)
