@@ -8,7 +8,7 @@ caps = {}
 caps["appActivity"] = "com.xueqiu.android.common.SplashActivity"
 caps["appPackage"] = "com.xueqiu.android"
 caps["platformName"] = "Android"
-caps["deviceName"] = "111"
+caps["deviceName"] = "11771"
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
 driver.implicitly_wait(5)
