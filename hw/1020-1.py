@@ -1,5 +1,4 @@
 import unittest
-
 from appium import webdriver
 
 class ATests(unittest.TestCase):
@@ -19,11 +18,3 @@ class ATests(unittest.TestCase):
         for x in self.driver.find_elements_by_xpath("//*"):
             print("text=",x.text)
             print("location",x.location)
-
-
-
-
-
-
-if __name__ == "__main__":
-  unittest.main()
