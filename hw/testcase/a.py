@@ -1,6 +1,9 @@
 import unittest
 from time import sleep
+
+import appium
 from appium import webdriver
+from appium.webdriver import WebElement
 from appium.webdriver.common.touch_action import TouchAction
 
 from hw.po import main, login
@@ -16,6 +19,7 @@ class ATests(unittest.TestCase):
         caps["platformName"] = "Android"
         caps["deviceName"] = "111"
         caps["unicodeKeyboard"] = True
+        caps["resetKeyboard"] = True
 
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
         self.driver.implicitly_wait(10)
@@ -37,4 +41,4 @@ class ATests(unittest.TestCase):
         self.driver.find_element(*login.username).send_keys("18611920559")
         self.driver.find_element(*login.password).send_keys("333333")
         self.driver.find_element(*login.sure).click()
-
+        #appium.webdriver.webelement.WebElement
